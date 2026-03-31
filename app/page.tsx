@@ -1,65 +1,138 @@
-import Image from "next/image";
+﻿"use client";
 
-export default function Home() {
+import Link from "next/link";
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="relative min-h-screen bg-black text-white overflow-hidden">
+
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-black to-black opacity-80" />
+
+      {/* Glow */}
+      <div className="absolute top-1/3 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-700 opacity-30 blur-[150px]" />
+
+      {/* Animated wrapper */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 animate-fadeUp">
+
+        {/* HERO */}
+        <section className="max-w-4xl py-32">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
+            VirtusQ
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-6 text-lg md:text-xl text-gray-300">
+            AI powered volleyball performance analysis built for serious athletes.
+            Upload your rep. Get instant elite level feedback.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/download"
+              className="rounded-xl bg-purple-600 px-8 py-4 text-lg font-semibold hover:bg-purple-500 transition"
+            >
+              Download App
+            </Link>
+
+            <Link
+              href="/pricing"
+              className="rounded-xl border border-gray-600 px-8 py-4 text-lg font-semibold hover:border-white transition"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </section>
+
+        {/* FEATURES */}
+        <section className="max-w-6xl w-full py-24 border-t border-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            Built for Modern Athletes
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10 text-left">
+            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-purple-600 transition">
+              <h3 className="text-xl font-semibold mb-4">AI Technique Scoring</h3>
+              <p className="text-gray-400">
+                Every rep is scored from 0 to 100 using real biomechanical pose data.
+              </p>
+            </div>
+
+            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-purple-600 transition">
+              <h3 className="text-xl font-semibold mb-4">Elite Performance Levels</h3>
+              <p className="text-gray-400">
+                Track your progression from Bronze to Champion with live analytics.
+              </p>
+            </div>
+
+            <div className="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 hover:border-purple-600 transition">
+              <h3 className="text-xl font-semibold mb-4">Personalized Fixes</h3>
+              <p className="text-gray-400">
+                Get specific technique corrections powered by AI pattern recognition.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS */}
+        <section className="max-w-5xl w-full py-24 border-t border-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            How It Works
+          </h2>
+
+          <div className="space-y-10 text-left">
+            <div>
+              <h3 className="text-xl font-semibold">1. Record Your Rep</h3>
+              <p className="text-gray-400 mt-2">
+                Film your pass, set, or receive using your phone.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">2. AI Pose Extraction</h3>
+              <p className="text-gray-400 mt-2">
+                VirtusQ extracts body joint data frame by frame.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">3. Elite Score Generated</h3>
+              <p className="text-gray-400 mt-2">
+                Our sequence model evaluates movement quality and generates an elite score.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <Link
+              href="/how-it-works"
+              className="text-purple-400 hover:text-purple-300 transition"
+            >
+              Learn More →
+            </Link>
+          </div>
+        </section>
+
+        {/* FINAL CTA */}
+        <section className="max-w-4xl py-24 border-t border-gray-800 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Ready to Level Up?
+          </h2>
+
+          <p className="mt-6 text-gray-400">
+            Join the next generation of AI driven volleyball training.
+          </p>
+
+          <div className="mt-10">
+            <Link
+              href="/download"
+              className="rounded-xl bg-purple-600 px-10 py-5 text-lg font-semibold hover:bg-purple-500 transition"
+            >
+              Get VirtusQ
+            </Link>
+          </div>
+        </section>
+
+      </div>
+    </main>
   );
 }
