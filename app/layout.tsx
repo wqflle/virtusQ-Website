@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "VirtusQ",
@@ -13,12 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
-      </head>
       <body className="bg-black text-white antialiased">
+        <Navbar />
         {children}
       </body>
     </html>
