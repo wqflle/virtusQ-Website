@@ -13,9 +13,7 @@
     },
     "production": {
       "autoIncrement": true,
-      "env": {
-        "NPM_FLAGS": "--legacy-peer-deps"
-      }
+      "node": "18.18.0"
     }
   },
   "submit": {
