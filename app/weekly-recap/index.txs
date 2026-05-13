@@ -1,0 +1,192 @@
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  useColorScheme,
+} from "react-native";
+import { useEffect, useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { darkColors, lightColors } from "../../themes/colors";
+
+type Analysis = {
+  skill: string;
+  quality: string;
+  primary_fix: string;
+  created_at: string;
+};
+
+export default function WeeklyRecapScreen() {
+  const scheme = useColorScheme();
+  const colors = scheme === "dark" ? darkColors : lightColors;
+
+  const [loading, setLoading] = useState(true);
+  const [score, setScore] = useState(0);
+  const [topSkill, setTopSkill] = useState("");
+  const [qualityBreakdown, setQualityBreakdown] = useState<any>({});
+  const [topFix, setTopFix] = useState("");
+
+  useEffect(() => {
+    loadWeeklyRecap();
+  }, []);
+
+  const loadWeeklyRecap = async () => {
+    const raw = await AsyncStorage.getItem("analysis_history");
+    const history: Analysis[] = raw ? JSON.parse(raw) : [];
+
+    const oneWeekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+
+    const recent = history.filter(
+      (h) => new Date(h.created_at).getTime() >= oneWeekAgo
+    );
+
+    if (recent.length === 0) {
+      setLoading(false);
+      return;
+    }
+
+    // ===== Skill frequency =====
+    const skillCounts: any = {};
+    const fixCounts: any = {};
+    const qualityCounts: any = { good: 0, situational: 0, bad: 0 };
+
+    let scoreSum = 0;
+
+    for (const r of recent) {
+      skillCounts[r.skill] = (skillCounts[r.skill] || 0) + 1;
+      fixCounts[r.primary_fix] = (fixCounts[r.primary_fix] || 0) + 1;
+      qualityCounts[r.quality]++;
+
+      if (r.quality === "good") scoreSum += 1;
+      if (r.quality === "situational") scoreSum += 0.6;
+      if (r.quality === "bad") scoreSum += 0.3;
+    }
+
+    setTopSkill(
+      Object.keys(skillCounts).sort(
+        (a, b) => skillCounts[b] - skillCounts[a]
+      )[0]
+    );
+
+    setTopFix(
+      Object.keys(fixCounts).sort(
+        (a, b) => fixCounts[b] - fixCounts[a]
+      )[0]
+    );
+
+    setQualityBreakdown(qualityCounts);
+
+    setScore(Math.round((scoreSum / recent.length) * 100));
+    setLoading(false);
+  };
+
+  if (loading) {
+    return (
+      <View
+        style={[
+          styles.container,
+          { backgroundColor: colors.background },
+        ]}
+      >
+        <Text style={{ color: colors.text }}>
+          Generating weekly recap…
+        </Text>
+      </View>
+    );
+  }
+
+  return (
+    <ScrollView
+      style={[styles.container, { backgroundColor: colors.background }]}
+      contentContainerStyle={{ paddingBottom: 40 }}
+    >
+      <Text style={[styles.title, { color: colors.text }]}>
+        Weekly AI Recap
+      </Text>
+
+      {/* SCORE */}
+      <View style={[styles.card, { backgroundColor: colors.card }]}>
+        <Text style={[styles.label, { color: colors.muted }]}>
+          Weekly Performance Score
+        </Text>
+        <Text style={[styles.score, { color: colors.text }]}>
+          {score}
+        </Text>
+      </View>
+
+      {/* TOP SKILL */}
+      <View style={[styles.card, { backgroundColor: colors.card }]}>
+        <Text style={[styles.label, { color: colors.muted }]}>
+          Most Trained Skill
+        </Text>
+        <Text style={[styles.value, { color: colors.text }]}>
+          {topSkill.toUpperCase()}
+        </Text>
+      </View>
+
+      {/* QUALITY */}
+      <View style={[styles.card, { backgroundColor: colors.card }]}>
+        <Text style={[styles.label, { color: colors.muted }]}>
+          Technique Quality
+        </Text>
+
+        {Object.keys(qualityBreakdown).map((q) => (
+          <Text key={q} style={{ color: colors.text }}>
+            {q}: {qualityBreakdown[q]}
+          </Text>
+        ))}
+      </View>
+
+      {/* PRIORITY FIX */}
+      <View style={[styles.card, { backgroundColor: colors.card }]}>
+        <Text style={[styles.label, { color: colors.muted }]}>
+          Priority Fix
+        </Text>
+        <Text style={[styles.value, { color: colors.text }]}>
+          {topFix}
+        </Text>
+      </View>
+
+      {/* COACH SUMMARY */}
+      <View style={[styles.card, { backgroundColor: colors.card }]}>
+        <Text style={[styles.label, { color: colors.muted }]}>
+          Coach Summary
+        </Text>
+        <Text style={{ color: colors.text, lineHeight: 22 }}>
+          You focused heavily on {topSkill}. Your consistency is improving,
+          but refining your primary fix will unlock your next level.
+        </Text>
+      </View>
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "700",
+    marginBottom: 24,
+  },
+  card: {
+    borderRadius: 18,
+    padding: 20,
+    marginBottom: 18,
+  },
+  label: {
+    fontSize: 13,
+    textTransform: "uppercase",
+    marginBottom: 8,
+  },
+  score: {
+    fontSize: 48,
+    fontWeight: "800",
+  },
+  value: {
+    fontSize: 20,
+    fontWeight: "700",
+  },
+});

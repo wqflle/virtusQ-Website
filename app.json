@@ -1,22 +1,32 @@
 {
   "expo": {
-    "name": "volleyball-ai-app",
+    "name": "VirtusQ",
     "slug": "volleyball-ai-app",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "volleyballaiapp",
+    "scheme": [
+      "virtusq"
+    ],
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.orgil.volleyballai",
+      "usesAppleSignIn": true,
+      "buildNumber": "4",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSPhotoLibraryUsageDescription": "VirtusQ accesses your photo library so you can choose a profile picture and upload volleyball training videos for AI analysis, such as receiving feedback on your technique and performance.",
+        "NSPhotoLibraryAddUsageDescription": "VirtusQ allows you to save your profile picture, analyzed videos, or feedback results to your photo library when you choose to export them."
+      }
     },
     "android": {
+      "package": "com.orgil.volleyballai",
+      "versionCode": 4,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "foregroundImage": "./assets/images/android-icon-foreground.png"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
@@ -25,8 +35,14 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+    "extra": {
+      "eas": {
+        "projectId": "c7a173cb-b16d-4960-b486-e78f53c1a299"
+      }
+    },
     "plugins": [
       "expo-router",
+      "expo-apple-authentication",
       [
         "expo-splash-screen",
         {
@@ -39,6 +55,7 @@
           }
         }
       ]
+ 
     ],
     "experiments": {
       "typedRoutes": true,
