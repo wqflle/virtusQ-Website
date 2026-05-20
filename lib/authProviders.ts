@@ -23,10 +23,10 @@ WebBrowser.maybeCompleteAuthSession();
 ===================================================== */
 
 const GOOGLE_WEB_CLIENT_ID =
-  "22905977377-7jscis02bfp2mn6vd8um07d25g6gva7m.apps.googleusercontent.com";
+  "385973919751-t1qg46pjq4e3d3b5q1vkhhil03bhjod5.apps.googleusercontent.com";
 
 const GOOGLE_IOS_CLIENT_ID =
-  "22905977377-u11nqglvuecjftq0ddioh0aud5lj14j6.apps.googleusercontent.com";
+  "385973919751-8q6qs4etgefeom3atv161in81d1eflma.apps.googleusercontent.com";
 
 /* ======================================================
    HELPERS

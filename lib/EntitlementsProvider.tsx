@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+﻿import React, { createContext, useContext, useEffect, useState } from "react";
 import Purchases from "react-native-purchases";
+import { revenueCatReady } from "./revenueCat";
 
 type Tier = "free" | "pro" | "elite";
 
@@ -20,25 +21,32 @@ export function EntitlementsProvider({ children }: { children: React.ReactNode }
 
   const update = (info: any) => {
     const active = info.entitlements.active;
-
     const hasElite = !!active["VertusQ_elite"];
     const hasPro = !!active["VirtusQ pro"];
-
     if (hasElite) setTier("elite");
     else if (hasPro) setTier("pro");
     else setTier("free");
-
     setLoading(false);
   };
 
   useEffect(() => {
+    let cancelled = false;
+
     const init = async () => {
+      // ✅ Wait for RevenueCat with a max timeout of 4 seconds
+      let waited = 0;
+      while (!revenueCatReady && waited < 4000) {
+        await new Promise(res => setTimeout(res, 100));
+        waited += 100;
+        if (cancelled) return;
+      }
+
       try {
         const info = await Purchases.getCustomerInfo();
-        update(info);
+        if (!cancelled) update(info);
       } catch (e) {
         console.log("Entitlements load error", e);
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     };
 
@@ -46,9 +54,10 @@ export function EntitlementsProvider({ children }: { children: React.ReactNode }
 
     const listener = Purchases.addCustomerInfoUpdateListener(update);
 
-   return () => {
-  listener?.remove?.();
-};
+    return () => {
+      cancelled = true;
+      listener?.remove?.();
+    };
   }, []);
 
   return (

@@ -21,19 +21,23 @@ export default function RootLayout() {
   const hasRouted = useRef(false);
 
   // ✅ Init RevenueCat
-  useEffect(() => {
-    const init = async () => {
-      try {
-        await initRevenueCat();
-      } catch (e) {
-        console.log("RevenueCat init failed", e);
-      } finally {
-        setReady(true);
-      }
-    };
+useEffect(() => {
+  const init = async () => {
+    try {
+      // ✅ Never wait more than 3 seconds for RevenueCat
+      await Promise.race([
+        initRevenueCat(),
+        new Promise(resolve => setTimeout(resolve, 3000))
+      ]);
+    } catch (e) {
+      console.log("RevenueCat init failed", e);
+    } finally {
+      setReady(true);
+    }
+  };
 
-    init();
-  }, []);
+  init();
+}, []);
 
   // ✅ Auth + Routing (NO navState dependency)
   useEffect(() => {

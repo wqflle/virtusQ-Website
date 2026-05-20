@@ -9,23 +9,21 @@ export async function initRevenueCat() {
     console.log("RC already initialized");
     return;
   }
-
   if (Platform.OS === "web") {
     console.log("RC skipped (web)");
     return;
   }
-
   try {
     console.log("RC INIT START");
-
     Purchases.setLogLevel(Purchases.LOG_LEVEL.DEBUG);
 
-    await Purchases.configure({
-      apiKey: "appl_NQomdfFzrUhMfmvqoceISeHBvSe",
-    });
+    const apiKey = Platform.OS === "ios"
+      ? "appl_NQomdfFzrUhMfmvqoceISeHBvSe"
+      : "goog_kaanrmSEnqXvjObasZHqKsjWOQU";
+
+    await Purchases.configure({ apiKey });
 
     console.log("RC INIT SUCCESS");
-
     revenueCatReady = true;
     initialized = true;
   } catch (e) {
