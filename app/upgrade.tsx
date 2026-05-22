@@ -173,7 +173,7 @@ export default function UpgradeScreen() {
           {/* ── HERO ── */}
           <View style={{ marginBottom: 24 }}>
             <Text style={[styles.eyebrow, { color: colors.primary }]}>
-              🏐 SPIKE AI
+              🏐 VirtusQ
             </Text>
             <Text style={[styles.title, { color: colors.text }]}>
               Your competitors{"\n"}are already using this.
