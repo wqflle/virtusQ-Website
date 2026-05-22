@@ -13,6 +13,7 @@
     },
     "production": {
       "autoIncrement": true,
+      "image": "latest",
       "android": {
         "gradleCommand": ":app:bundleRelease"
       }
