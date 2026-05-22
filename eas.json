@@ -13,7 +13,9 @@
     },
     "production": {
       "autoIncrement": true,
-      "image": "latest",
+      "ios": {
+        "image": "latest"
+      },
       "android": {
         "gradleCommand": ":app:bundleRelease"
       }
