@@ -717,37 +717,35 @@ export default function ResultsScreen() {
                 Composite score based on posture, timing, stability, and rep cleanliness.
               </Text>
             </>
-          ) : (
-            <View
-              style={[
-                styles.eliteLocked,
-                { borderColor: colors.border, backgroundColor: colors.card },
-              ]}
-            >
-              <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-                <Ionicons name="lock-closed" size={18} color={colors.muted} />
-                <Text style={{ color: colors.text, fontWeight: "900" }}>
-                  Elite Score
-                </Text>
-              </View>
-              <Text style={{ color: colors.muted, marginTop: 8, lineHeight: 19 }}>
-                Upgrade to unlock biomechanical scoring and detailed breakdown.
-              </Text>
-              <TouchableOpacity
-                onPress={() => router.push("/upgrade")}
-                activeOpacity={0.9}
-                style={[
-                  styles.smallCta,
-                  { backgroundColor: colors.background, borderColor: colors.border },
-                ]}
-              >
-                <Text style={{ color: colors.text, fontWeight: "900" }}>
-                  Unlock Elite
-                </Text>
-                <Ionicons name="chevron-forward" size={16} color={colors.muted} />
-              </TouchableOpacity>
-            </View>
-          )}
+) : (
+  <>
+    <View style={{ flexDirection: "row", alignItems: "baseline", gap: 8 }}>
+      <Text style={{ fontSize: 36, fontWeight: "900", color: colors.text }}>
+        {eliteScore}
+      </Text>
+      <Text style={{ color: colors.muted, fontWeight: "900" }}>
+        / 100 — {eliteTierLabel}
+      </Text>
+    </View>
+    <Text style={{ color: colors.muted, marginTop: 6 }}>
+      Composite score based on posture, timing, stability, and rep cleanliness.
+    </Text>
+    <TouchableOpacity
+      onPress={() => router.push("/upgrade")}
+      activeOpacity={0.9}
+      style={[
+        styles.smallCta,
+        { backgroundColor: colors.background, borderColor: colors.border },
+      ]}
+    >
+      <Ionicons name="bar-chart-outline" size={16} color={colors.muted} />
+      <Text style={{ color: colors.muted, flex: 1, fontSize: 13 }}>
+        See what's pulling your score down — unlock breakdown
+      </Text>
+      <Ionicons name="chevron-forward" size={16} color={colors.muted} />
+    </TouchableOpacity>
+  </>
+)}
         </View>
 
         {/* ELITE BREAKDOWN */}
@@ -830,36 +828,45 @@ export default function ResultsScreen() {
           </View>
         )}
 
-        {/* ELITE LOCKED TEASER */}
-        {!eliteInsight && (
-          <View
-            style={[
-              styles.eliteLocked,
-              { borderColor: colors.border, backgroundColor: colors.card },
-            ]}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-              <Ionicons name="lock-closed" size={18} color={colors.muted} />
-              <Text style={{ color: colors.text, fontWeight: "900" }}>
-                Elite Coaching Insight
-              </Text>
-            </View>
-            <Text style={{ color: colors.muted, marginTop: 8, lineHeight: 19 }}>
-              Upgrade to Elite to get a precise, coach-style correction after every rep.
-            </Text>
-            <TouchableOpacity
-              onPress={() => router.push("/upgrade")}
-              activeOpacity={0.9}
-              style={[
-                styles.smallCta,
-                { backgroundColor: colors.background, borderColor: colors.border },
-              ]}
-            >
-              <Text style={{ color: colors.text, fontWeight: "900" }}>Unlock Elite</Text>
-              <Ionicons name="chevron-forward" size={16} color={colors.muted} />
-            </TouchableOpacity>
-          </View>
-        )}
+) : (
+  <>
+    <Text style={{ fontSize: 28, fontWeight: "900", color: tier.color, marginTop: 8 }}>
+      {tier.emoji} {tier.label}
+    </Text>
+    <View
+      style={{
+        height: 10,
+        borderRadius: 999,
+        backgroundColor: colors.border,
+        marginTop: 14,
+        overflow: "hidden",
+      }}
+    >
+      <View
+        style={{
+          height: "100%",
+          width: `${progress * 100}%`,
+          backgroundColor: tier.color,
+          borderRadius: 999,
+        }}
+      />
+    </View>
+    <TouchableOpacity
+      onPress={() => router.push("/upgrade")}
+      activeOpacity={0.9}
+      style={[
+        styles.smallCta,
+        { backgroundColor: colors.background, borderColor: colors.border },
+      ]}
+    >
+      <Ionicons name="stats-chart-outline" size={16} color={colors.muted} />
+      <Text style={{ color: colors.muted, flex: 1, fontSize: 13 }}>
+        Track your pts to next tier — unlock Pro
+      </Text>
+      <Ionicons name="chevron-forward" size={16} color={colors.muted} />
+    </TouchableOpacity>
+  </>
+)}
 
         {/* CONFIDENCE */}
         <View

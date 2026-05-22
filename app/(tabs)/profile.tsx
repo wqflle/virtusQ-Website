@@ -684,7 +684,7 @@ const { tier, progress, percentToNext } = useMemo(
     <SnapStat label="Analyses" value={`${totalAnalysesAnimated}`} colors={colors} />
     <SnapStat label="Last Rep" value={lastAnalysisDate ? safeDateLabel(lastAnalysisDate) : "—"} colors={colors} />
     <SnapStat label="Performance" value={tier.label} colors={colors} />
-    <SnapStat label="Latest" value={canAccessEliteScore ? `${latestScore}/100` : "Locked"} colors={colors} />
+    <SnapStat label="Latest" value={`${latestScore}/100`} colors={colors} />
   </View>
 
   {/* ✅ Elite-only */}
@@ -709,7 +709,7 @@ const { tier, progress, percentToNext } = useMemo(
 
   {/* ✅ Pro+ */}
   <LockedPremium
-    locked={!canAccessPerformance}
+    locked={false}
     colors={colors}
     title="Performance Level is Pro+"
     subtitle="Upgrade to track your tier progression and ranking."
@@ -720,41 +720,24 @@ const { tier, progress, percentToNext } = useMemo(
           PERFORMANCE LEVEL
         </Text>
 
-        {/* ✅ only clickable when unlocked */}
-        {(canAccessPerformance ? (
-          <TouchableOpacity
-            onPress={() => router.push("/performance-explained")}
-            style={{
-              width: 24,
-              height: 24,
-              borderRadius: 12,
-              borderWidth: 1,
-              borderColor: colors.border,
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: colors.card,
-            }}
-            activeOpacity={0.8}
-          >
-            <Text style={{ color: colors.text, fontWeight: "900", fontSize: 13 }}>?</Text>
-          </TouchableOpacity>
-        ) : (
-          <View
-            style={{
-              width: 24,
-              height: 24,
-              borderRadius: 12,
-              borderWidth: 1,
-              borderColor: colors.border,
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: colors.card,
-              opacity: 0.4,
-            }}
-          >
-            <Text style={{ color: colors.text, fontWeight: "900", fontSize: 13 }}>?</Text>
-          </View>
-        ))}
+
+<TouchableOpacity
+  onPress={() => router.push("/performance-explained")}
+  style={{
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: colors.card,
+  }}
+  activeOpacity={0.8}
+>
+  <Text style={{ color: colors.text, fontWeight: "900", fontSize: 13 }}>?</Text>
+</TouchableOpacity>
+
       </View>
 
       <Text style={{ color: tier.color, fontWeight: "900", marginTop: 8 }}>
