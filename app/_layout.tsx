@@ -44,12 +44,20 @@ useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
 
 
-      try {
+try {
         // NOT LOGGED IN
         if (!user) {
           router.replace("/(auth)/login");
           hasRouted.current = true;
           return;
+        }
+
+        // ✅ Always register with RevenueCat immediately for ALL users
+        try {
+          await Purchases.logIn(user.uid);
+          await AsyncStorage.setItem("activeUid", user.uid);
+        } catch (e) {
+          console.log("RC login error", e);
         }
 
         // ONBOARDING
@@ -75,14 +83,9 @@ useEffect(() => {
         router.replace("/(tabs)");
         hasRouted.current = true;
 
-        // ✅ background tasks (non-blocking)
-        (async () => {
-          try {
-            await AsyncStorage.setItem("activeUid", user.uid);
-            await Purchases.logIn(user.uid);
-          } catch (e) {
-            console.log("Background init error", e);
-          }
+      } catch (e) {
+        console.log("Routing error", e);
+      }
         })();
 
       } catch (e) {
