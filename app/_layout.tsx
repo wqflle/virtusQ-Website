@@ -21,30 +21,26 @@ export default function RootLayout() {
   const hasRouted = useRef(false);
 
   // ✅ Init RevenueCat
-useEffect(() => {
-  const init = async () => {
-    try {
-      // ✅ Never wait more than 3 seconds for RevenueCat
-      await Promise.race([
-        initRevenueCat(),
-        new Promise(resolve => setTimeout(resolve, 3000))
-      ]);
-    } catch (e) {
-      console.log("RevenueCat init failed", e);
-    } finally {
-      setReady(true);
-    }
-  };
+  useEffect(() => {
+    const init = async () => {
+      try {
+        await Promise.race([
+          initRevenueCat(),
+          new Promise(resolve => setTimeout(resolve, 3000))
+        ]);
+      } catch (e) {
+        console.log("RevenueCat init failed", e);
+      } finally {
+        setReady(true);
+      }
+    };
+    init();
+  }, []);
 
-  init();
-}, []);
-
-  // ✅ Auth + Routing (NO navState dependency)
+  // ✅ Auth + Routing
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-
-
-try {
+      try {
         // NOT LOGGED IN
         if (!user) {
           router.replace("/(auth)/login");
@@ -86,17 +82,11 @@ try {
       } catch (e) {
         console.log("Routing error", e);
       }
-        })();
-
-      } catch (e) {
-        console.log("Routing error", e);
-      }
     });
 
     return () => unsubscribe();
   }, []);
 
-  // ✅ ONLY block on init (never on routing)
   if (!ready) return null;
 
   return (
@@ -143,12 +133,7 @@ function RootStack() {
       <Stack.Screen name="(auth)" options={{ headerShown: false }} />
       <Stack.Screen name="consent" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-
-      <Stack.Screen
-        name="training-setup"
-        options={{ title: "Availability" }}
-      />
-
+      <Stack.Screen name="training-setup" options={{ title: "Availability" }} />
       <Stack.Screen
         name="settings"
         options={{
@@ -156,7 +141,6 @@ function RootStack() {
           headerLeft: () => <BackArrow color={colors.text} />,
         }}
       />
-
       <Stack.Screen
         name="upgrade"
         options={{
@@ -164,7 +148,6 @@ function RootStack() {
           headerLeft: () => <BackArrow color={colors.text} />,
         }}
       />
-
       <Stack.Screen
         name="progress/skill"
         options={{
@@ -172,7 +155,6 @@ function RootStack() {
           headerLeft: () => <BackArrow color={colors.text} />,
         }}
       />
-
       <Stack.Screen
         name="performance-explained"
         options={{
