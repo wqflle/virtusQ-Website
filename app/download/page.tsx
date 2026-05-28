@@ -34,11 +34,13 @@ export default function DownloadPage() {
 
         <div className="mt-24 flex flex-col md:flex-row gap-6 justify-center items-center">
           <a
-            href="#"
-            className="px-10 py-4 rounded-2xl bg-white text-black font-semibold hover:bg-zinc-200 transition shadow-xl"
-          >
-            Download on App Store
-          </a>
+href="https://apps.apple.com/au/app/virtusq/id6761644948"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-10 py-4 rounded-2xl bg-white text-black font-semibold hover:bg-zinc-200 transition shadow-xl"
+>
+  Download on App Store
+</a>
 
           <a
             href="#"
