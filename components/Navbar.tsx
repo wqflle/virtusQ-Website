@@ -1,116 +1,127 @@
-﻿"use client";
+'use client'
 
-import Link from "next/link";
-import { useState } from "react";
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
+
+const navLinks = [
+  { href: '/how-it-works', label: 'How It Works' },
+  { href: '/pricing', label: 'Pricing' },
+]
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handler, { passive: true })
+    return () => window.removeEventListener('scroll', handler)
+  }, [])
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl backdrop-blur-2xl bg-white/5 border border-white/10 rounded-2xl px-6 py-4 shadow-2xl">
-      <div className="flex items-center justify-between">
-
-        {/* Logo */}
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent"
-        >
-          VirtusQ
-        </Link>
-
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm text-zinc-300">
-
-          <Link
-            href="/how-it-works"
-            className="hover:text-purple-400 transition duration-200"
-          >
-            How It Works
+    <>
+      <motion.nav
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl rounded-2xl px-6 py-3.5 transition-all duration-500"
+        style={{
+          background: scrolled ? 'rgba(4,4,10,0.85)' : 'rgba(255,255,255,0.04)',
+          backdropFilter: 'blur(24px)',
+          WebkitBackdropFilter: 'blur(24px)',
+          border: scrolled ? '1px solid rgba(124,58,237,0.2)' : '1px solid rgba(255,255,255,0.08)',
+          boxShadow: scrolled ? '0 8px 40px rgba(0,0,0,0.4)' : 'none',
+        }}
+      >
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="text-xl font-black tracking-tight gradient-text">
+            VirtusQ
           </Link>
 
-          <Link
-            href="/pricing"
-            className="hover:text-purple-400 transition duration-200"
-          >
-            Pricing
-          </Link>
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-8 text-sm text-text-muted">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:text-text transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
 
-          <Link
-            href="/terms"
-            className="hover:text-purple-400 transition duration-200"
-          >
-            Terms
-          </Link>
+          {/* Desktop CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            <Link
+              href="/pricing"
+              className="text-sm text-text-muted hover:text-text transition-colors duration-200 px-3 py-2"
+            >
+              Plans
+            </Link>
+            <Link
+              href="/download"
+              className="px-5 py-2.5 rounded-xl text-sm font-bold text-white transition-all duration-200 hover:opacity-90"
+              style={{ background: 'linear-gradient(135deg, #7c3aed, #a78bfa)', boxShadow: '0 4px 20px rgba(124,58,237,0.4)' }}
+            >
+              Download Free
+            </Link>
+          </div>
 
-          <Link
-            href="/privacy"
-            className="hover:text-purple-400 transition duration-200"
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden text-text-muted hover:text-text transition-colors p-1"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
           >
-            Privacy
-          </Link>
-
-          <Link
-            href="/download"
-            className="bg-purple-600 px-5 py-2 rounded-lg text-white hover:bg-purple-500 transition duration-200 shadow-lg"
-          >
-            Download
-          </Link>
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
 
-        {/* Mobile Button */}
-        <button
-          className="md:hidden text-white text-xl"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? "✕" : "☰"}
-        </button>
-      </div>
-
-      {/* Mobile Dropdown */}
-      {open && (
-        <div className="mt-6 flex flex-col gap-5 md:hidden text-sm text-zinc-300 border-t border-white/10 pt-6">
-
-          <Link
-            href="/how-it-works"
-            onClick={() => setOpen(false)}
-            className="hover:text-purple-400 transition"
-          >
-            How It Works
-          </Link>
-
-          <Link
-            href="/pricing"
-            onClick={() => setOpen(false)}
-            className="hover:text-purple-400 transition"
-          >
-            Pricing
-          </Link>
-
-          <Link
-            href="/terms"
-            onClick={() => setOpen(false)}
-            className="hover:text-purple-400 transition"
-          >
-            Terms of Service
-          </Link>
-
-          <Link
-            href="/privacy"
-            onClick={() => setOpen(false)}
-            className="hover:text-purple-400 transition"
-          >
-            Privacy Policy
-          </Link>
-
-          <Link
-            href="/download"
-            onClick={() => setOpen(false)}
-            className="bg-purple-600 px-5 py-3 rounded-lg text-center text-white hover:bg-purple-500 transition shadow-lg"
-          >
-            Download
-          </Link>
-        </div>
-      )}
-    </nav>
-  );
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="md:hidden overflow-hidden"
+            >
+              <div className="flex flex-col gap-1 pt-5 mt-4 border-t" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="py-2.5 px-2 text-sm text-text-muted hover:text-text transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <Link
+                  href="/pricing"
+                  onClick={() => setOpen(false)}
+                  className="py-2.5 px-2 text-sm text-text-muted hover:text-text transition-colors"
+                >
+                  Plans
+                </Link>
+                <Link
+                  href="/download"
+                  onClick={() => setOpen(false)}
+                  className="mt-3 text-center py-3 rounded-xl text-sm font-bold text-white"
+                  style={{ background: 'linear-gradient(135deg, #7c3aed, #a78bfa)' }}
+                >
+                  Download Free
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.nav>
+    </>
+  )
 }

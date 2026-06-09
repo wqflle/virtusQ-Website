@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\dev\\virtusq-website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\pricing\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\pricing\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\layout.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\layout.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\download\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\download\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -19,20 +11,43 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\how-it-works\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\components\\Navbar.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:components\\Navbar.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\terms\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\terms\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\postcss.config.mjs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:postcss.config.mjs||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\privacy\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\privacy\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\layout.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\layout.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\pricing\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\pricing\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\download\\page.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\components\\Navbar.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:components\\Navbar.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\app\\globals.css||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\globals.css||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\postcss.config.mjs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:postcss.config.mjs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\virtusq-website\\tailwind.config.mjs||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -71,35 +86,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\dev\\virtusq-website\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\dev\\virtusq-website\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-07T09:25:54.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "page.tsx",
+              "DocumentMoniker": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\download\\page.tsx",
+              "RelativeDocumentMoniker": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\download\\page.tsx",
+              "ToolTip": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\download\\page.tsx",
+              "RelativeToolTip": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\download\\page.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-05-07T08:56:31.706Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "page.tsx",
+              "DocumentMoniker": "C:\\dev\\virtusq-website\\app\\privacy\\page.tsx",
+              "RelativeDocumentMoniker": "app\\privacy\\page.tsx",
+              "ToolTip": "C:\\dev\\virtusq-website\\app\\privacy\\page.tsx",
+              "RelativeToolTip": "app\\privacy\\page.tsx",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T05:49:17.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "page.tsx",
+              "DocumentMoniker": "C:\\dev\\virtusq-website\\app\\terms\\page.tsx",
+              "RelativeDocumentMoniker": "app\\terms\\page.tsx",
+              "ToolTip": "C:\\dev\\virtusq-website\\app\\terms\\page.tsx",
+              "RelativeToolTip": "app\\terms\\page.tsx",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAYwIsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T05:48:14.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Navbar.tsx",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\components\\Navbar.tsx",
               "RelativeDocumentMoniker": "components\\Navbar.tsx",
               "ToolTip": "C:\\dev\\virtusq-website\\components\\Navbar.tsx",
               "RelativeToolTip": "components\\Navbar.tsx",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwDkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwHQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-02-16T08:12:45.454Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "page.tsx",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\app\\page.tsx",
               "RelativeDocumentMoniker": "app\\page.tsx",
               "ToolTip": "C:\\dev\\virtusq-website\\app\\page.tsx",
               "RelativeToolTip": "app\\page.tsx",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAwwJEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAIoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-02-16T08:07:08.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "tailwind.config.mjs",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\tailwind.config.mjs",
               "RelativeDocumentMoniker": "tailwind.config.mjs",
@@ -111,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "package.json",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\package.json",
               "RelativeDocumentMoniker": "package.json",
@@ -123,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "postcss.config.mjs",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\postcss.config.mjs",
               "RelativeDocumentMoniker": "postcss.config.mjs",
@@ -135,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "tailwind.config.js",
               "DocumentMoniker": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\tailwind.config.js",
               "RelativeDocumentMoniker": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\tailwind.config.js",
@@ -147,44 +210,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "page.tsx",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\app\\download\\page.tsx",
               "RelativeDocumentMoniker": "app\\download\\page.tsx",
               "ToolTip": "C:\\dev\\virtusq-website\\app\\download\\page.tsx",
               "RelativeToolTip": "app\\download\\page.tsx",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAwwJYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwCIAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-16T07:18:45.284Z"
+              "WhenOpened": "2026-02-16T07:18:45.284Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "page.tsx",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\app\\pricing\\page.tsx",
               "RelativeDocumentMoniker": "app\\pricing\\page.tsx",
               "ToolTip": "C:\\dev\\virtusq-website\\app\\pricing\\page.tsx",
               "RelativeToolTip": "app\\pricing\\page.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACABAAAAAAAAAAAYwFwBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-16T07:18:13.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-16T07:18:13.138Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "page.tsx",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\app\\how-it-works\\page.tsx",
               "RelativeDocumentMoniker": "app\\how-it-works\\page.tsx",
               "ToolTip": "C:\\dev\\virtusq-website\\app\\how-it-works\\page.tsx",
               "RelativeToolTip": "app\\how-it-works\\page.tsx",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-02-16T07:17:42.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "CTA.tsx",
               "DocumentMoniker": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\CTA.tsx",
               "RelativeDocumentMoniker": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\CTA.tsx",
@@ -196,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Tiers.tsx",
               "DocumentMoniker": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\Tiers.tsx",
               "RelativeDocumentMoniker": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\Tiers.tsx",
@@ -208,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "FeatureGrid.tsx",
               "DocumentMoniker": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\FeatureGrid.tsx",
               "RelativeDocumentMoniker": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\FeatureGrid.tsx",
@@ -220,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Hero.tsx",
               "DocumentMoniker": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\Hero.tsx",
               "RelativeDocumentMoniker": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\Hero.tsx",
@@ -232,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Footer.tsx",
               "DocumentMoniker": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\Footer.tsx",
               "RelativeDocumentMoniker": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\Footer.tsx",
@@ -244,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "Navbar.tsx",
               "DocumentMoniker": "C:\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\Navbar.tsx",
               "RelativeDocumentMoniker": "..\\..\\Users\\orgil\\OneDrive\\Documents\\virtusq-website\\app\\components\\Navbar.tsx",
@@ -256,19 +319,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "globals.css",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\app\\globals.css",
               "RelativeDocumentMoniker": "app\\globals.css",
               "ToolTip": "C:\\dev\\virtusq-website\\app\\globals.css",
               "RelativeToolTip": "app\\globals.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-02-16T07:12:04.043Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "layout.tsx",
               "DocumentMoniker": "C:\\dev\\virtusq-website\\app\\layout.tsx",
               "RelativeDocumentMoniker": "app\\layout.tsx",
@@ -276,8 +339,7 @@
               "RelativeToolTip": "app\\layout.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-16T07:11:56.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-16T07:11:56.378Z"
             }
           ]
         }

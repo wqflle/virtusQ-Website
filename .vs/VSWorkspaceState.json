@@ -5,9 +5,10 @@
     "\\app\\download",
     "\\app\\how-it-works",
     "\\app\\pricing",
+    "\\app\\privacy",
     "\\app\\terms",
     "\\components"
   ],
-  "SelectedNode": "\\components\\Navbar.tsx",
+  "SelectedNode": "\\app\\download\\page.tsx",
   "PreviewInSolutionExplorer": false
 }
