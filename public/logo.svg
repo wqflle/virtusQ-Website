@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <!-- Overall horizontal gradient: cyan-blue → blue → purple -->
+    <linearGradient id="vGrad" x1="100" y1="512" x2="905" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#00ccff"/>
+      <stop offset="38%"  stop-color="#2255ff"/>
+      <stop offset="100%" stop-color="#9922dd"/>
+    </linearGradient>
+
+    <!-- Inner highlight gradient (lighter / bevel edge) -->
+    <linearGradient id="innerGrad" x1="300" y1="300" x2="724" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#66eeff"/>
+      <stop offset="50%"  stop-color="#99aaff"/>
+      <stop offset="100%" stop-color="#cc66ff"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle outer glow (wider) -->
+    <filter id="outerGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="28" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Black background -->
+  <rect width="1024" height="1024" fill="#000000"/>
+
+  <!-- Outer ambient glow (behind the V) -->
+  <path d="M 512 855 L 120 140 L 300 140 L 512 760 L 724 140 L 905 140 Z"
+        fill="url(#vGrad)"
+        filter="url(#outerGlow)"
+        opacity="0.45"/>
+
+  <!-- Main V body -->
+  <path d="M 512 855 L 120 140 L 300 140 L 512 760 L 724 140 L 905 140 Z"
+        fill="url(#vGrad)"
+        filter="url(#glow)"/>
+
+  <!-- Inner bevel highlight — left arm inner face -->
+  <path d="M 300 140 L 512 760 L 468 790 L 272 140 Z"
+        fill="url(#innerGrad)"
+        opacity="0.55"/>
+
+  <!-- Inner bevel highlight — right arm inner face -->
+  <path d="M 724 140 L 560 790 L 512 760 L 752 140 Z"
+        fill="url(#innerGrad)"
+        opacity="0.55"/>
+
+  <!-- Sharp specular edge — left arm top inner -->
+  <line x1="300" y1="140" x2="512" y2="760"
+        stroke="rgba(160,230,255,0.7)" stroke-width="3"/>
+
+  <!-- Sharp specular edge — right arm top inner -->
+  <line x1="724" y1="140" x2="512" y2="760"
+        stroke="rgba(200,160,255,0.5)" stroke-width="3"/>
+</svg>
