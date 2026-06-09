@@ -2,9 +2,9 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
-/* ── Spike pose skeleton (300 × 320 viewBox) ── */
+/* ── Pass pose skeleton (300 × 320 viewBox) ── */
 const JOINTS: Record<string, [number, number]> = {
   head:      [150, 30],
   neck:      [150, 52],
@@ -34,11 +34,11 @@ const BONES: [string, string][] = [
 ]
 
 const METRICS = [
-  { label: 'ARM VELOCITY',  value: 92, color: '#00d4ff' },
-  { label: 'JUMP TIMING',   value: 78, color: '#00d4ff' },
-  { label: 'CONTACT PT',    value: 88, color: '#00d4ff' },
-  { label: 'BODY ROTATION', value: 71, color: '#ff9d00' },
-  { label: 'BALANCE',       value: 64, color: '#ff3d3d' },
+  { label: 'PLATFORM ANGLE',   value: 92, color: '#00d4ff' },
+  { label: 'CONTACT TIMING',   value: 78, color: '#00d4ff' },
+  { label: 'FOREARM ALIGN',    value: 88, color: '#00d4ff' },
+  { label: 'WEIGHT TRANSFER',  value: 71, color: '#ff9d00' },
+  { label: 'APPROACH TIMING',  value: 64, color: '#ff3d3d' },
 ]
 
 /* ── AI Analysis mockup panel ── */
@@ -211,7 +211,7 @@ function AnalysisPanel() {
               <div>8ms LAT</div>
             </div>
             <div className="absolute bottom-2.5 left-3 font-mono" style={{ fontSize: '8px', color: 'var(--text-subtle)' }}>
-              SPIKE APPROACH · SET 2
+              PASS ANALYSIS · SET 2
             </div>
 
             {booted && (
@@ -290,7 +290,7 @@ function AnalysisPanel() {
             >
               <div className="font-mono tracking-widest mb-1" style={{ fontSize: '7px', color: '#ff3d3d' }}>WEAK POINT</div>
               <div className="leading-tight" style={{ fontSize: '8px', color: '#ff8080' }}>
-                Late arm swing. Contact pt 18cm low.
+                Platform angle 14° wide. Contact height 8cm low.
               </div>
             </motion.div>
           </div>
@@ -369,14 +369,13 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-14">
-              <Link href="/demo" className="btn-primary">
-                Analyze My Game
+              <Link href="/download" className="btn-primary">
+                Download the App
                 <ArrowRight size={15} />
               </Link>
-              <button className="btn-secondary">
-                <Play size={13} style={{ color: 'var(--cyan)' }} />
-                Watch Demo
-              </button>
+              <Link href="/pricing" className="btn-secondary" style={{ textDecoration: 'none' }}>
+                View Pricing
+              </Link>
             </div>
 
             <div className="flex flex-wrap gap-10">

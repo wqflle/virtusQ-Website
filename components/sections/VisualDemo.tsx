@@ -53,17 +53,17 @@ function ScoreRing({ score, color, label }: { score: number; color: string; labe
 }
 
 const IMPROVEMENTS = [
-  { metric: 'Arm Velocity',    before: 71, after: 92, unit: '%' },
-  { metric: 'Jump Timing',     before: 55, after: 78, unit: '%' },
-  { metric: 'Contact Point',   before: 63, after: 88, unit: '%' },
-  { metric: 'Body Rotation',   before: 58, after: 71, unit: '%' },
+  { metric: 'Platform Angle',    before: 71, after: 92, unit: '%' },
+  { metric: 'Contact Timing',    before: 55, after: 78, unit: '%' },
+  { metric: 'Platform Stability', before: 63, after: 88, unit: '%' },
+  { metric: 'Weight Transfer',   before: 58, after: 71, unit: '%' },
 ]
 
 const FIXES = [
-  'Raise swing path — elbow must lead at contact',
-  'Jump 110ms earlier relative to setter release',
-  'Extend arm fully before wrist snap',
-  'Rotate hips 35° before shoulder follow-through',
+  'Bring forearms together — platform must be flat at contact',
+  'Form platform 80ms earlier before ball arrival',
+  'Bend knees lower to improve contact height consistency',
+  'Transfer weight through ball for directional control',
 ]
 
 export default function VisualDemo() {
@@ -150,10 +150,10 @@ export default function VisualDemo() {
               </div>
               <div className="space-y-3">
                 {[
-                  'Late arm swing at contact',
-                  'Jump 140ms early vs setter',
-                  'Elbow drops 18° pre-contact',
-                  'Incomplete hip rotation',
+                  'Platform angle too wide at contact',
+                  'Platform forming too late before contact',
+                  'Knees too high — contact height incorrect',
+                  'Weight transfer stalling before contact',
                 ].map((flaw) => (
                   <div key={flaw} className="flex items-start gap-2.5">
                     <AlertTriangle size={12} style={{ color: '#ff6060', flexShrink: 0, marginTop: '2px' }} />
@@ -240,8 +240,8 @@ export default function VisualDemo() {
           <p className="text-sm mb-6" style={{ color: 'var(--text-muted)' }}>
             This analysis took 47 seconds. The improvement took 8 weeks of targeted practice.
           </p>
-          <Link href="/demo" className="btn-primary">
-            Start Your Analysis
+          <Link href="/download" className="btn-primary">
+            Download the App — Free
             <ArrowRight size={15} />
           </Link>
         </motion.div>

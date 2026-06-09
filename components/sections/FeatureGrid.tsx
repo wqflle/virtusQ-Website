@@ -32,7 +32,7 @@ const FEATURES = [
     body: 'Outside hitter mechanics differ from setter mechanics. Our coaching logic is calibrated for your specific role — not generic volleyball advice.',
     metrics: [
       { label: 'Positions', value: '6', unit: '' },
-      { label: 'Skills', value: '12+', unit: '' },
+      { label: 'Skills', value: '2', unit: '' },
     ],
     tag: 'PERSONALIZED',
   },
@@ -189,11 +189,11 @@ export default function FeatureGrid() {
               </p>
             </div>
             <a
-              href="/demo"
+              href="/download"
               className="btn-primary w-full justify-center"
               style={{ textDecoration: 'none' }}
             >
-              Analyze My Game
+              Download App — Free
             </a>
           </motion.div>
         </div>

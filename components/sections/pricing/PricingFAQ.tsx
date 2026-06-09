@@ -10,7 +10,7 @@ const FAQS = [
   },
   {
     q: 'What video formats and lengths are supported?',
-    a: 'We accept MP4, MOV, and AVI files up to 4K resolution. Clips can be up to 3 minutes long. For best results, we recommend 8–30 second clips focusing on a single skill (spike approach, serve, pass, etc.).',
+    a: 'We accept MP4, MOV, and AVI files up to 4K resolution. Clips can be up to 3 minutes long. For best results, we recommend 8–30 second clips focusing on a single skill (pass or set).',
   },
   {
     q: 'How accurate is the AI analysis?',
@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: 'Is there an app, or is this web-only?',
-    a: 'VirtusQ is available on iOS, Android, and web. You can film and upload directly from the mobile app, or upload from any device via the web dashboard. Analysis results sync across all devices.',
+    a: 'VirtusQ is available on iOS and web. You can film and upload directly from the iOS app, or upload from any device via the web dashboard. Analysis results sync across devices.',
   },
   {
     q: 'Do you store my videos?',

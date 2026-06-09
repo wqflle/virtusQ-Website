@@ -56,7 +56,7 @@ const SPECS = [
 const CAPABILITIES = [
   'Pose estimation via deep convolutional network',
   'Frame-differencing for velocity & acceleration vectors',
-  'Contact point triangulation and attack angle measurement',
+  'Contact point triangulation and platform angle measurement',
   'Jump timing offset detection (±8ms resolution)',
   'Position-specific benchmark comparison database',
   'Movement efficiency score across full skill repertoire',

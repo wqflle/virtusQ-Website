@@ -5,7 +5,7 @@ const STATS = [
   { value: '14', label: 'Joint keypoints tracked' },
   { value: '120fps', label: 'Frame analysis rate' },
   { value: '6', label: 'Positions supported' },
-  { value: '12+', label: 'Skills analyzed' },
+  { value: '2', label: 'Skills analyzed' },
 ]
 
 export default function FeaturesHero() {

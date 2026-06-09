@@ -10,7 +10,7 @@ const DETAILS = [
     subtitle: 'Objective measurement. No interpretation required.',
     body: [
       'Every analysis produces a single, objective performance score from 0 to 100. This score is calculated by our biomechanics model — trained on thousands of hours of competitive volleyball footage at every level.',
-      'The score is broken into sub-categories: approach mechanics, arm path, contact point, hip-shoulder separation, jump timing, and landing mechanics. Each sub-score contributes to the overall, giving you a precise map of where to focus.',
+      'The score is broken into sub-categories specific to passing and setting: platform angle, contact height, forearm alignment, weight transfer, and approach timing for passing; hand position, wrist snap timing, body alignment, and elbow angle for setting. Each sub-score contributes to the overall, giving you a precise map of where to focus.',
     ],
     specs: [
       { label: 'Score Range', value: '0–100' },

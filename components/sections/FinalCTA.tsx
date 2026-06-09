@@ -90,7 +90,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.7, delay: 0.22 }}
         >
           <Link
-            href="/demo"
+            href="/download"
             className="btn-primary"
             style={{
               fontSize: '1rem',
@@ -98,7 +98,7 @@ export default function FinalCTA() {
               boxShadow: '0 0 40px rgba(0,212,255,0.25)',
             }}
           >
-            Analyze My Game — Free
+            Download the App — Free
             <ArrowRight size={16} />
           </Link>
           <Link

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const TESTIMONIALS = [
   {
-    quote: 'I had been playing for 6 years and nobody had ever told me my elbow was dropping before contact. VirtusQ caught it in the first analysis. Fixed it in three weeks.',
+    quote: 'I had been playing for 6 years and nobody had ever told me my platform angle was collapsing before contact. VirtusQ caught it in the first analysis. Fixed it in three weeks.',
     name: 'Marcus T.',
     role: 'Outside Hitter · Club AAU',
     score: { before: 61, after: 83 },
@@ -18,9 +18,9 @@ const TESTIMONIALS = [
     isCoach: true,
   },
   {
-    quote: 'I thought my approach was textbook. The AI showed me my hip rotation was completing 80ms after contact — completely negating my power. That one fix changed everything.',
+    quote: 'I thought my setting was textbook. The AI showed me my wrist snap was initiating 70ms too early — completely killing my directional control. That one fix changed everything.',
     name: 'Devon K.',
-    role: 'Middle Blocker · Division II Recruit',
+    role: 'Setter · Division II Recruit',
     score: { before: 58, after: 79 },
     delta: '+21',
   },

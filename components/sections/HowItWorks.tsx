@@ -7,7 +7,7 @@ const STEPS = [
     n: '01',
     icon: Upload,
     title: 'Upload your clip',
-    body: 'Record any volleyball skill — spike, serve, pass, set, or receive — and upload directly from your phone or camera. Any angle, any court.',
+    body: 'Record your pass or set and upload directly from your phone or camera. Any angle, any court, any lighting.',
     detail: 'MP4 · MOV · AVI · 4K supported',
     mockup: (
       <div
@@ -20,7 +20,7 @@ const STEPS = [
             <Upload size={14} style={{ color: 'var(--cyan)' }} />
           </div>
           <div className="flex-1">
-            <div className="text-white text-xs mb-1">spike_practice_tue.mp4</div>
+            <div className="text-white text-xs mb-1">passing_practice_tue.mp4</div>
             <div className="h-1 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
               <motion.div
                 className="h-full rounded-full"
@@ -119,7 +119,7 @@ const STEPS = [
     n: '04',
     icon: Target,
     title: 'Receive your exact technical fixes',
-    body: 'Not generic tips. Specific corrections tied to your exact video frame. "Your elbow drops 14° before contact — raise your swing path to increase attack angle."',
+    body: 'Not generic tips. Specific corrections tied to your exact video frame. "Your platform angle is 18° too wide at contact — bring your forearms together earlier for consistent ball direction."',
     detail: 'Prioritized by performance impact',
     mockup: (
       <div
@@ -128,9 +128,9 @@ const STEPS = [
       >
         <div style={{ color: 'var(--text-subtle)' }} className="mb-3">CORRECTIONS</div>
         {[
-          { issue: 'Elbow drop at contact', impact: 'HIGH', color: '#ff3d3d' },
-          { issue: 'Jump timing −120ms early', impact: 'MED', color: '#ff9d00' },
-          { issue: 'Hip rotation incomplete', impact: 'MED', color: '#ff9d00' },
+          { issue: 'Platform angle too wide', impact: 'HIGH', color: '#ff3d3d' },
+          { issue: 'Late platform formation', impact: 'MED', color: '#ff9d00' },
+          { issue: 'Weight transfer incomplete', impact: 'MED', color: '#ff9d00' },
         ].map((item, i) => (
           <motion.div
             key={item.issue}

@@ -230,7 +230,7 @@ export default function PricingSection() {
 
                   {/* CTA */}
                   <Link
-                    href={tier.id === 'club' ? '/contact' : '/demo'}
+                    href={tier.id === 'club' ? '/contact' : '/download'}
                     className={
                       tier.ctaStyle === 'primary'
                         ? 'btn-primary justify-center text-center'

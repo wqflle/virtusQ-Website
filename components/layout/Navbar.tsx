@@ -6,7 +6,7 @@ import { Menu, X, ArrowRight } from 'lucide-react'
 
 const NAV_LINKS = [
   { label: 'Features', href: '/features' },
-  { label: 'Demo', href: '/demo' },
+  { label: 'Download', href: '/download' },
   { label: 'Pricing', href: '/pricing' },
 ]
 
@@ -67,11 +67,11 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href="/demo"
+            href="/download"
             className="btn-primary"
             style={{ padding: '0.6rem 1.25rem', fontSize: '0.85rem' }}
           >
-            Analyze My Game
+            Download App
             <ArrowRight size={14} />
           </Link>
         </div>
@@ -114,8 +114,8 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link href="/demo" className="btn-primary" style={{ width: 'fit-content' }} onClick={() => setOpen(false)}>
-                Analyze My Game
+              <Link href="/download" className="btn-primary" style={{ width: 'fit-content' }} onClick={() => setOpen(false)}>
+                Download App
                 <ArrowRight size={14} />
               </Link>
             </div>
