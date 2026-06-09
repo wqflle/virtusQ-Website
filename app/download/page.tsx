@@ -55,7 +55,7 @@ export default function DownloadPage() {
       {/* Hero */}
       <section className="relative overflow-hidden pt-32 pb-20">
         <Aurora intensity="strong" />
-        <div className="container-custom relative z-10">
+        <div className="container-max relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             {/* Left */}
             <div className="flex-1 max-w-2xl">
@@ -139,8 +139,8 @@ export default function DownloadPage() {
       </section>
 
       {/* Why VirtusQ */}
-      <section className="section-padding" style={{ background: 'var(--bg-2)' }} ref={whyRef}>
-        <div className="container-custom">
+      <section className="section-y" style={{ background: 'var(--bg-2)' }} ref={whyRef}>
+        <div className="container-max">
           <div className="text-center mb-14">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -197,8 +197,8 @@ export default function DownloadPage() {
       </section>
 
       {/* Getting Started */}
-      <section className="section-padding" ref={stepsRef}>
-        <div className="container-custom">
+      <section className="section-y" ref={stepsRef}>
+        <div className="container-max">
           <div className="text-center mb-14">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -243,8 +243,8 @@ export default function DownloadPage() {
       </section>
 
       {/* Plans Teaser */}
-      <section className="section-padding" style={{ background: 'var(--bg-2)' }} ref={plansRef}>
-        <div className="container-custom">
+      <section className="section-y" style={{ background: 'var(--bg-2)' }} ref={plansRef}>
+        <div className="container-max">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -265,7 +265,7 @@ export default function DownloadPage() {
               </p>
               <Link
                 href="/pricing"
-                className="inline-flex items-center gap-2 text-accent-light hover:text-white transition-colors font-semibold"
+                className="inline-flex items-center gap-2 text-purple-light hover:text-white transition-colors font-semibold"
               >
                 View All Plans <ArrowUpRight size={16} />
               </Link>
@@ -301,8 +301,8 @@ export default function DownloadPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="section-padding" ref={ctaRef}>
-        <div className="container-custom max-w-3xl text-center">
+      <section className="section-y" ref={ctaRef}>
+        <div className="container-max max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={ctaInView ? { opacity: 1, scale: 1 } : {}}

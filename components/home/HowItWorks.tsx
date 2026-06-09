@@ -109,12 +109,12 @@ function StepCard({ step, i }: { step: typeof steps[number]; i: number }) {
       </div>
 
       {/* Mock UI */}
-      <div className="flex-1 w-full max-w-xs">
+      <div className="flex-1 flex justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.94, rotate: isEven ? -2 : 2 }}
           animate={inView ? { opacity: 1, scale: 1, rotate: 0 } : {}}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="rounded-2xl p-6"
+          className="rounded-2xl p-6 w-full max-w-sm"
           style={{
             background: 'rgba(255,255,255,0.025)',
             border: '1px solid var(--border)',
@@ -152,7 +152,7 @@ function StepCard({ step, i }: { step: typeof steps[number]; i: number }) {
             ))}
           </div>
         </motion.div>
-      </div>
+      </div> {/* end mock UI */}
     </motion.div>
   )
 }

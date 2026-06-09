@@ -76,7 +76,7 @@ const tiers: Tier[] = [
   {
     name: 'Club', priceMonthly: '200', priceYearly: '2000', highlight: false, tag: 'For Teams',
     tagline: 'AI coaching for your entire squad.',
-    description: 'Built for coaches and programs that want to bring AI-level analysis to every player. Manage multiple athletes from a single portal.',
+    description: 'One Club subscription gives 15 players full Elite access via unique redemption codes. Manage your whole squad from a single coach portal.',
     features: {
       'AI Skill Detection': true, 'Basic Quality Feedback': true,
       'Elite Score Breakdown': true, 'Performance Tier Tracking': true,
@@ -140,7 +140,7 @@ export default function PricingPage() {
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-end pb-20 overflow-hidden pt-32" ref={heroRef}>
         <Aurora intensity="medium" />
-        <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
+        <div className="container-max relative z-10 text-center max-w-4xl mx-auto">
           <motion.span
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -168,7 +168,7 @@ export default function PricingPage() {
             transition={{ delay: 0.7 }}
             className="text-sm text-text-subtle"
           >
-            All prices in AUD · No lock-in contracts · Cancel anytime
+            Prices shown in AUD · Automatically adjusted for your region · No lock-in · Cancel anytime
           </motion.p>
 
           {/* Billing Toggle */}
@@ -196,8 +196,8 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Cards */}
-      <section className="section-padding" ref={cardsRef}>
-        <div className="container-custom">
+      <section className="section-y" ref={cardsRef}>
+        <div className="container-max">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {tiers.map((tier, i) => {
               const price = billing === 'monthly' ? tier.priceMonthly : tier.priceYearly
@@ -262,8 +262,8 @@ export default function PricingPage() {
       </section>
 
       {/* Feature Comparison */}
-      <section className="section-padding" style={{ background: 'var(--bg-2)' }} ref={tableRef}>
-        <div className="container-custom">
+      <section className="section-y" style={{ background: 'var(--bg-2)' }} ref={tableRef}>
+        <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={tableInView ? { opacity: 1, y: 0 } : {}}
@@ -323,8 +323,8 @@ export default function PricingPage() {
       </section>
 
       {/* Club Callout */}
-      <section className="section-padding" ref={clubRef}>
-        <div className="container-custom">
+      <section className="section-y" ref={clubRef}>
+        <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={clubInView ? { opacity: 1, y: 0 } : {}}
@@ -341,12 +341,15 @@ export default function PricingPage() {
                   For Clubs & Coaches
                 </span>
                 <h2 className="display-md text-text mb-4">Club Plan — A$200/month</h2>
-                <p className="text-text-muted leading-relaxed text-lg max-w-2xl mb-8">
+                <p className="text-text-muted leading-relaxed text-lg max-w-2xl mb-3">
                   Quality coaching analysis has always been available to elite programs with large budgets. The VirtusQ Club plan changes that. For A$200/month, your entire squad gets access to AI-powered biomechanical analysis at club scale.
+                </p>
+                <p className="text-text-muted leading-relaxed mb-8">
+                  Every Club subscription includes <strong className="text-white">15 unique access codes</strong>. Each player redeems their code to unlock full Elite access — unlimited analyses, deep coaching insights, and session history — at no extra cost.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
-                    { title: 'Multi-Athlete Management', desc: 'Add every player and track their individual progress from a single dashboard.' },
+                    { title: '15 Player Elite Access Codes', desc: 'Each player redeems a unique code for full Elite plan access — no per-seat charges.' },
                     { title: 'Squad Performance Dashboard', desc: "See your entire team's Elite Scores, tier placements, and improvement trends at a glance." },
                     { title: 'Bulk Rep Analysis', desc: 'Submit reps from your whole squad simultaneously — no queuing during busy sessions.' },
                     { title: 'Coach Admin Portal', desc: 'Dedicated coach interface for reviewing sessions, flagging reps, and annotating feedback.' },
@@ -378,8 +381,8 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section-padding" style={{ background: 'var(--bg-2)' }} ref={faqRef}>
-        <div className="container-custom max-w-3xl">
+      <section className="section-y" style={{ background: 'var(--bg-2)' }} ref={faqRef}>
+        <div className="container-max max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={faqInView ? { opacity: 1, y: 0 } : {}}
@@ -392,9 +395,9 @@ export default function PricingPage() {
             {[
               { q: 'Can I switch plans at any time?', a: 'Yes. You can upgrade or downgrade at any time through the app. Changes take effect at your next billing cycle.' },
               { q: 'Is there a free trial for paid plans?', a: 'The Free plan lets you experience core AI analysis before committing to a paid tier. Upgrade whenever you\'re ready.' },
-              { q: 'What currency are the prices in?', a: 'All prices are listed in AUD (Australian Dollars). We\'re an Australian product and pricing reflects that.' },
+              { q: 'What currency are the prices in?', a: 'Prices are shown in AUD but are automatically adjusted for your region at checkout — so you\'ll see the equivalent in your local currency.' },
               { q: 'What happens if I cancel?', a: 'You retain access until the end of your billing period. After that, you drop to the Free tier — you never lose your account or history.' },
-              { q: 'Is the Club plan billed per athlete?', a: 'No. The Club plan is a flat A$200/month covering your entire squad — no per-seat charges, no surprises.' },
+              { q: 'How do player codes work on the Club plan?', a: 'Each Club subscription includes 15 unique access codes. You distribute them to your players — when a player redeems their code, they get full Elite access at no extra cost to them.' },
               { q: 'Do you offer discounts for schools?', a: 'We work with schools and academies on a case-by-case basis. Get in touch via the Club plan to discuss your program.' },
             ].map((faq, i) => (
               <motion.div
@@ -413,8 +416,8 @@ export default function PricingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="section-padding" ref={ctaRef}>
-        <div className="container-custom max-w-3xl text-center">
+      <section className="section-y" ref={ctaRef}>
+        <div className="container-max max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.97 }}
             animate={ctaInView ? { opacity: 1, y: 0, scale: 1 } : {}}
