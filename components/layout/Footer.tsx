@@ -106,11 +106,9 @@ export default function Footer() {
         <div className="divider mb-8" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex flex-col sm:flex-row items-center gap-3 text-xs" style={{ color: 'var(--text-subtle)' }}>
-            <span>© 2025 VirtusQ Inc. All rights reserved.</span>
-            <span className="hidden sm:inline" style={{ color: 'rgba(255,255,255,0.1)' }}>·</span>
-            <span className="font-mono">ABN 27 958 310 326</span>
-          </div>
+          <p className="text-xs" style={{ color: 'var(--text-subtle)' }}>
+            © 2025 VirtusQ Inc. All rights reserved.
+          </p>
           <p className="text-[10px] font-mono" style={{ color: 'var(--text-subtle)', letterSpacing: '0.12em' }}>
             AI ANALYSIS ENGINE · V2.1 · BUILT FOR PRECISION
           </p>
